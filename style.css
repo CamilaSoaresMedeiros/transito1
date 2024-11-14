@@ -297,7 +297,8 @@ nav a:hover, .dropdown:hover .conteudo {
     grid-area: "c";
     position: fixed;
     bottom: 0px;
-
+    left: 0px;
+    width: 100%;
 }
 
 .footer p:last-child{
