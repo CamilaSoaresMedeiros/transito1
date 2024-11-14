@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a235ee22ad.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <style>
+        .content{
+            display: flex;
+            justify-content: space-around;
+            margin: 60px;
+        }
+
+        .text-section{
+            max-width: 500px;
+        }
+
+        .dest{
+            color: #e4c54e;
+        }
+
+        .image-section{
+            display: flex;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header class="slide-in-top">
+            <div class="logo_nome">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <h2>SafeLife</h2>
+            </div>
+            <nav>
+                <a href="indexx.html" class="selected">Home</a>
+                <li class="dropdown">
+                    <a href="#" class="conteudo">Conteúdo</a>
+                    <div class="caixa-dropdown">
+                        <a href="estati.html">Estatísticas</a>
+                        <a href="causas.html">Causas</a>
+                        <a href="conse.html">Consequências</a>
+                        <a href="prevencao.html">Prevenção</a>
+                        <a href="legislacao.html">Legislação</a>
+                        <a href="testemunhos.html">Testemunhos</a>
+                    </div>
+                </li>
+                <a href="conclusão.html">Conclusão</a>
+                <a href="formulario.html">Contato</a>
+                <a href="bibliografia.html">Bibliografia</a>
+            </nav>
+        </header>
+        
+        <div class="content ">
+                <div class="text-section slide-in-left">
+                    <h1 class="scale-in-hor-left" >Violência no trânsito</h1>
+                    <h3><span class="dest">REFLEXÕES</span> SOBRE<br> O MUNDO ATUAL</h3>
+                    <p>Violência no trânsito é qualquer comportamento que coloque em risco a segurança e integridade física de motoristas, passageiros, ciclistas, pedestres e demais usuários das vias públicas, podendo causar acidentes graves, lesões permanentes e até mesmo mortes. </p>
+                    <p>Isso pode incluir dirigir sob efeito de drogas ou álcool, excesso de velocidade, desrespeito às regras de trânsito, uso do celular enquanto dirige, ultrapassagens perigosas, falta de uso de cinto de segurança, entre outros.</p>
+                    <p>O Código de Trânsito Brasileiro é fundamental para ajudar a aumentar a segurança no trânsito e a prevenção da violência nas vias públicas. Ele estabelece as diretrizes e normas para o tráfego, bem como as infrações e penalidades correspondentes. </p>
+                </div>
+                <div class="image-section ">
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
+
+                    <dotlottie-player class="slide-in-right "  src="https://lottie.host/9121b9ac-690e-4aac-abae-ddcd468234fc/gQkMqwnBjt.json" background="transparent" speed="1" style="max-width: 400px; height: 400px;" loop autoplay></dotlottie-player>
+                </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SafeLife</p>
+                <div class="redes">
+                    <i class="fa-brands fa-instagram redes_icons "></i>
+                    <i class="fa-brands fa-linkedin redes_icons"></i>
+                    <i class="fa-brands fa-youtube redes_icons"></i>
+                </div>
+            </div>
+            <p>Produzido por Camila</p>
+        </footer>
+    </div>
+</body>
+</html>

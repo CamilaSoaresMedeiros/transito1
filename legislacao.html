@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a235ee22ad.js" crossorigin="anonymous"></script>
+    <title>Legislação</title>
+    <style>
+        /* Estilos básicos para o layout */
+        /* Estilos básicos para o layout */
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .accordion {
+            width: 30%;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .accordion label {
+            display: block;
+            background-color: #4ed8c4;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: left;
+            position: relative;
+            border-radius: 10px;
+            color: rgb(66, 66, 66);
+            display: flex;
+            align-items: center;
+            
+        }
+
+
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            padding: 0 20px;
+            background-color: #edeced;
+            text-align: justify;
+            border-radius: 8px;
+        }
+
+        .accordion-content p {
+            padding: 10px 0;
+        }
+
+        /* Usando o :checked para controlar a expansão */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label + .accordion-content {
+            max-height: 500px; /* Altura suficiente para o conteúdo expandir */
+        }
+
+        /* Remover margem quando a lista não está expandida */
+        input[type="checkbox"] + label + .accordion-content {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label + .accordion-content {
+            display: block;
+        }
+        
+
+        h3{
+            font-size: 18px;
+            margin: 0px 0px 0px 10px;
+        }
+
+
+        .seca{
+            margin: 30px 0px;
+        }
+
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .text-section{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-section div:last-child{
+            width: 18%;
+        }
+
+        .text-section div:last-child img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo_nome">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+            <h2>SafeLife</h2>
+            </div>
+            <nav>
+                <a href="indexx.html">Home</a>
+                <li class="dropdown">
+                    <a href="#" id="conteudoLink" class="conteudo selected" >Conteúdo</a>
+                    <div class="caixa-dropdown">
+                        <a href="estati.html">Estatísticas</a>
+                        <a href="causas.html">Causas</a>
+                        <a href="conse.html" >Consequências</a>
+                        <a href="prevencao.html" >Prevenção</a>
+                        <a href="legislacao.html"  class="selected">Legislação</a>
+                        <a href="testemunhos.html">Testemunhos</a>
+                    </div>
+                </li>
+                <a href="conclusão.html">Conclusão</a>
+                <a href="formulario.html">Contato</a>
+                <a href="bibliografia.html">Bibliografia</a>
+            </nav>
+        </header>
+        
+        <div class="content">
+            <!-- Adicionando o conteúdo na text-section -->
+            <div class="text-section">
+                <div class="slide-in-left">
+                    <h1 class="scale-in-hor-left">Legislação
+                    </h1>
+                    <p class="desc">O Brasil conta com um conjunto robusto de leis e regulamentos voltados para a segurança no trânsito. A principal legislação que rege essa área é o Código de Trânsito Brasileiro (CTB), instituído pela Lei 9.503/1997. Além disso, medidas específicas foram introduzidas ao longo dos anos para endurecer as penalidades e promover um trânsito mais seguro. Abaixo, abordaremos as principais normas e ações legais em vigor.
+                    </p>
+                </div>
+                <div class="slide-in-right">
+                    <img src="livro-de-leis (2).png" alt="">
+                </div>
+            </div>
+            
+            <!-- Acordeões expansivos na segunda div -->
+
+                <div class="accordion-container">
+                    <!-- Lista expansiva 1 -->
+                    <div class="flex">
+                        <div class="accordion ">
+                            <input type="checkbox" id="item1">
+                            <label for="item1" class="scale-in-hor-left"> 
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Penalidades para o uso de álcool:</h3></label>
+                            <div class="accordion-content">
+                                <p>De acordo com o artigo 165 do CTB, dirigir sob a influência de álcool ou de qualquer substância psicoativa é considerado uma infração gravíssima. As penalidades incluem multa (que pode chegar a R$ 2.934,70, dobrada em caso de reincidência) e suspensão da carteira de motorista por 12 meses.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Lista expansiva 2 -->
+                        <div class="accordion">
+                            <input type="checkbox" id="item2">
+                            <label for="item2" class="scale-in-hor-left" >
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Excesso de velocidade: </h3></label>
+                            <div class="accordion-content">
+                                <p>O artigo 218 do CTB trata das penalidades para o excesso de velocidade, que varia de infração média a gravíssima, dependendo do percentual acima do limite permitido. A multa pode ser de até R$ 880,41, e em casos mais graves, pode resultar em suspensão do direito de dirigir.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Lista expansiva 3 -->
+                        <div class="accordion">
+                            <input type="checkbox" id="item3">
+                            <label for="item3" class="scale-in-hor-left">
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Uso de celular ao volante:</h3></label>
+                            <div class="accordion-content">
+                                <p>O artigo 252 proíbe o uso de celular enquanto se dirige, considerando-o uma infração gravíssima, com multa de R$ 293,47 e adição de 7 pontos na carteira de habilitação.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Lista expansiva 4 -->
+                        <div class="accordion">
+                            <input type="checkbox" id="item4">
+                            <label for="item4" class="scale-in-hor-left">
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Crimes de trânsito:</h3> </label>
+                            <div class="accordion-content">
+                                <p>O CTB também prevê penas para crimes graves, como homicídio culposo ou lesão corporal grave no trânsito, ambos podendo levar a prisão, com base no artigo 302 e 303.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seca slide-in-left">
+                        <div>
+                            <h2 class="scale-in-hor-left">Lei seca</h2>
+                            <p style="width: 50vw;">
+                                A Lei 11.705/2008, conhecida como Lei Seca, é uma das medidas mais eficazes para reduzir a violência no trânsito relacionada ao consumo de álcool. Ela endureceu as penalidades para quem dirige sob efeito de álcool. Com essa lei, qualquer concentração de álcool por litro de sangue, verificada pelo teste do bafômetro, já constitui infração de trânsito.
+                                </p>
+                         </div>
+                        <!-- Lista expansiva 5 -->
+                        <div class="flex">
+                            <div class="accordion">
+                                <input type="checkbox" id="item5">
+                                <label for="item5">
+                                    <i class="fa-solid fa-arrow-right arrow"></i>
+                                    <h3>Tolerância zero:</h3></label>
+                                <div class="accordion-content">
+                                    <p>A lei prevê punição para qualquer teor alcoólico no organismo, com multas pesadas e apreensão da carteira de motorista.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                                                <!-- Lista expansiva 6 -->
+                            
+                                                <div class="accordion">
+                            <input type="checkbox" id="item6">
+                            <label for="item6">
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Fiscalização intensiva:</h3> </label>
+                            <div class="accordion-content">
+                                <p>A Lei Seca resultou no aumento das operações de fiscalização com uso de bafômetros em blitzes por todo o Brasil. Segundo o Detran, a lei ajudou a reduzir em até 30% o número de mortes em acidentes nas principais capitais brasileiras.
+                                </p>
+                            </div>
+                                                </div>
+                        </div>
+                </div>
+
+                    <div>
+                        <h2>Educação e Fiscalização no Trânsito
+                        </h2>
+                        <p style="width: 50vw;">
+                            O Denatran e os Detrans estaduais desempenham um papel fundamental na educação e fiscalização de motoristas. Algumas ações que contribuem para a segurança no trânsito incluem:
+                            </p>
+                     </div>
+                    <!-- Lista expansiva 7 -->
+                    <div class="flex">
+                        <div class="accordion">
+                            <input type="checkbox" id="item7">
+                            <label for="item7">
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Campanhas educativas:</h3> </label>
+                            <div class="accordion-content">
+                                <p>Iniciativas como a Semana Nacional do Trânsito, realizada anualmente, visam conscientizar a população sobre a importância de comportamentos seguros nas ruas e estradas.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Lista expansiva 8 -->
+                        <div class="accordion">
+                            <input type="checkbox" id="item8">
+                            <label for="item8">
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Radares e fiscalização eletrônica:</h3> </label>
+                            <div class="accordion-content">
+                                <p> O uso de radares fixos e móveis nas rodovias é uma estratégia importante para reduzir o excesso de velocidade. O Conselho Nacional de Trânsito (Contran) tem intensificado a fiscalização por meio de tecnologia para flagrar infrações.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Lista expansiva 9 -->
+                        <div class="accordion">
+                            <input type="checkbox" id="item9">
+                            <label for="item9">
+                                <i class="fa-solid fa-arrow-right arrow"></i>
+                                <h3>Aperfeiçoamento na formação de condutores:</h3> </label>
+                            <div class="accordion-content">
+                                <p>Desde 2020, os requisitos para a formação de novos motoristas foram alterados, tornando mais rigoroso o processo de obtenção da CNH. Isso inclui maior número de aulas práticas e simuladas, além de maior ênfase em direção defensiva e comportamento seguro no trânsito.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SafeLife</p>
+                <div class="redes">
+                    <i class="fa-brands fa-instagram redes_icons "></i>
+                    <i class="fa-brands fa-linkedin redes_icons"></i>
+                    <i class="fa-brands fa-youtube redes_icons"></i>
+                </div>
+            </div>
+            <p>Produzido por Camila</p>
+        </footer>
+    </div>
+</body>
+</html>

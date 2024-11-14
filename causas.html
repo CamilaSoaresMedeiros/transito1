@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a235ee22ad.js" crossorigin="anonymous"></script>
+    <title>Causas</title>
+    <style>
+       main {
+            height: 700px;
+            margin: 0;
+            display: grid;
+            grid-template-rows: 600px 10px;
+            grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 1fr;
+            align-items: center;
+            justify-items: center;
+        }
+
+        main#carousel {
+            grid-row: 1 / 2;
+            grid-column: 1 / 9;
+            width: 80vw;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 600px;
+            --items: 6;
+            --middle: 3;
+            --position: 1;
+            pointer-events: none;
+
+        }
+
+        div.item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 400px;
+            height: 500px;
+            --r: calc(var(--position) - var(--offset));
+            --abs: max(calc(var(--r) * -1), var(--r));
+            transition: all 0.25s linear;
+            transform: rotateY(calc(-10deg * var(--r)))
+                translateX(calc(-300px * var(--r)));
+            z-index: calc((var(--position) - var(--abs)));
+            filter: blur(calc(var(--abs) * 7px));
+            opacity: calc(1 - (var(--abs) * 0.5)); /
+        }
+
+        div.item:nth-of-type(1) {
+            --offset: 1;
+        }
+        div.item:nth-of-type(2) {
+            --offset: 2;
+        }
+        div.item:nth-of-type(3) {
+            --offset: 3;
+        }
+        div.item:nth-of-type(4) {
+            --offset: 4;
+        }
+        div.item:nth-of-type(5) {
+            --offset: 5;
+        }
+
+        div.item:nth-of-type(6) {
+            --offset: 6;
+        }
+
+        input:nth-of-type(1) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        input:nth-of-type(1):checked ~ main#carousel {
+            --position: 1;
+        }
+
+        input:nth-of-type(2) {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        input:nth-of-type(2):checked ~ main#carousel {
+            --position: 2;
+        }
+
+        input:nth-of-type(3) {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+        }
+        input:nth-of-type(3):checked ~ main#carousel {
+            --position: 3;
+        }
+
+        input:nth-of-type(4) {
+            grid-column: 5 / 6;
+            grid-row: 2 / 3;
+        }
+        input:nth-of-type(4):checked ~ main#carousel {
+            --position: 4;
+        }
+
+        input:nth-of-type(5) {
+            grid-column: 6 / 7;
+            grid-row: 2 / 3;
+        }
+        input:nth-of-type(5):checked ~ main#carousel {
+            --position: 5;
+        }
+
+        
+        input:nth-of-type(6) {
+            grid-column: 7 / 8;
+            grid-row: 2 / 3;
+        }
+        input:nth-of-type(6):checked ~ main#carousel {
+            --position: 6;
+        }
+
+        .item p{
+            text-align: justify;
+        }
+
+        h3{
+            font-weight: 400;
+        }
+
+        .center{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .img{
+            width: 100%;
+        }
+
+        .img img{
+            aspect-ratio: 16 /9;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .ilu{
+            width: 40px;
+        }
+
+        .ilu img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa_maior">
+        <header>
+            <div class="logo_nome">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+            <h2>SafeLife</h2>
+            </div>
+            <nav>
+                <a href="indexx.html">Home</a>
+                <li class="dropdown">
+                    <a href="#" id="conteudoLink" class="conteudo selected" >Conteúdo</a>
+                    <div class="caixa-dropdown">
+                        <a href="estati.html" >Estatísticas</a>
+                        <a href="causas.html" class="selected">Causas</a>
+                        <a href="conse.html">Consequências</a>
+                        <a href="prevencao.html">Prevenção</a>
+                        <a href="legislacao.html">Legislação</a>
+                        <a href="testemunhos.html">Testemunhos</a>
+                    </div>
+                </li>
+                <a href="conclusão.html">Conclusão</a>
+                <a href="formulario.html">Contato</a>
+                <a href="bibliografia.html">Bibliografia</a>
+            </nav>
+        </header>
+        
+        <div class="content">
+            <div class="text-section slide-in-left">
+                <h1 class="scale-in-hor-left">Causas</h1>
+                <p>Há várias causas que propiciam os acidentes no trânsito, entre as principais estão:</p>
+            </div>
+            <main class="slide-in-fwd-center">
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <main id="carousel">
+                    <div class="item">
+                        <div class="center">
+                            <h3>Excesso de velocidade</h3>
+                                <div class="ilu">
+                                    <img src="excesso-de-velocidade.png" alt="">
+                                </div>
+                        </div>
+                            <div class="img"><img src="carro.png" alt=""></div>
+                        <p>A velocidade elevada é um dos principais fatores que aumentam o risco de acidentes graves no trânsito. No Brasil, estima-se que cerca de 40% dos acidentes com mortes estejam 
+                        relacionados ao excesso de velocidade.</p>
+                    </div>
+                    <div class="item">
+                        <div class="center">
+                            <h3>Álcool e direção</h3>
+                                <div class="ilu">
+                                    <img src="alcool_icon.png" alt="">
+                                </div>
+                        </div>
+                            <div class="img"><img src="alcool.png" alt=""></div>
+                        <p> A combinação de álcool e direção é 
+                            responsável por uma significativa parcela dos acidentes graves no Brasil. Em 
+                            2022, cerca de 30% dos acidentes fatais foram atribuídos a motoristas 
+                            alcoolizados. </p>
+                    </div>
+                    <div class="item">
+                        <div class="center">
+                            <h3>Distração ao volante</h3>
+                                <div class="ilu">
+                                    <img src="image.png" alt="">
+                                </div>
+                        </div>
+                            <div class="img"><img src="celular_volante.png" alt="" ></div>
+                        <p> Um fator que vem crescendo em 
+                            relevância é a distração ao volante, principalmente com o uso de dispositivos 
+                            eletrônicos. O uso de celular enquanto dirige aumenta em até 400% o risco de 
+                            acidentes, pois desvia a atenção do motorista tanto da estrada quanto do 
+                            controle do veículo. </p>
+                    </div>
+                    <div class="item">
+                        <div class="center">
+                            <h3>Desrespeito às leis de trânsito </h3>
+                            <div class="ilu">
+                                <img src="livro-de-leis (3).png" alt="">
+                            </div>
+                        </div>
+                        <div class="img"><img src="https://fenixcontabilsp.com.br/wp-content/uploads/2023/01/PRINCIPAIS-LEIS-EMPRESARIAIS-QUE-VOCE-DEVE-CONHECER-BLOG.jpg" alt=""></div>
+                        <p>  Muitas infrações de trânsito 
+                            estão ligadas a comportamentos arriscados, como ultrapassagens perigosas, 
+                            avanço de sinal vermelho e não respeito à faixa de pedestres. Em 2021, mais de 
+                            8 milhões de multas foram aplicadas no Brasil por excesso de velocidade e 
+                            avanço de sinal. </p>
+                    </div>
+                    <div class="item">
+                        <div class="center">
+                            <h3>Infraestrutura Deficiente</h3>
+                            <div class="ilu">
+                                <img src="estrada.png" alt="">
+                            </div>
+                        </div>
+                        <div class="img"><img src="https://www.rdnews.com.br//storage/webdisco/2022/12/22/1024x656/097c58bed587e43549b530a832e4f9ae.jpg" alt=""></div>
+                        <p> A má qualidade das estradas e vias 
+                            urbanas no Brasil é um problema recorrente. Muitos acidentes são causados por 
+                            buracos, sinalização inadequada, iluminação deficiente e ausência de ciclovias 
+                            e faixas exclusivas para pedestres. </p>
+                    </div>
+                    <div class="item">
+                        <div class="center">
+                            <h3>Fadiga</h3>
+                            <div class="ilu">
+                                <img src="esgotamento.png" alt="">
+                            </div>
+                        </div>
+                        <div class="img"><img src="https://www.amafresp.org.br/wp-content/uploads/2018/12/cansaco-1200x630.jpg" alt="" ></div>
+                        <p>Motoristas que dirigem cansados apresentam um 
+                            risco elevado de acidentes. A fadiga reduz a capacidade de concentração, 
+                            retarda os reflexos e aumenta a probabilidade de adormecer ao volante. 
+                            No Brasil, estudos apontam que cerca de 10% dos acidentes são causados por motoristas que estão fisicamente ou mentalmente exaustos. 
+                         </p>
+                    </div>
+                </main>
+        </div>
+
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SafeLife</p>
+                <div class="redes">
+                    <i class="fa-brands fa-instagram redes_icons "></i>
+                    <i class="fa-brands fa-linkedin redes_icons"></i>
+                    <i class="fa-brands fa-youtube redes_icons"></i>
+                </div>
+            </div>
+            <p>Produzido por Camila</p>
+        </footer>
+    </div>
+
+  
+</body>
+</html>

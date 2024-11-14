@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a235ee22ad.js" crossorigin="anonymous"></script>
+    <title>Conclusão</title>
+    <style>
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body{
+            background-image: url("fundo.png");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center bottom ; 
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.862);
+            z-index: -1;
+        }
+
+        #conc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        #conc p{
+            max-width: 1000px;
+            text-align: justify;
+        }
+
+        #caixa_nos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1000px;
+        }
+
+        #caixa_nos h2{
+            font-weight: 500;
+        }
+
+        .nos{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .nos:hover{
+            box-shadow: 0px 0px 7px #274287;
+            border: 1px solid #274287;
+        }
+        
+        #eu:hover{
+            box-shadow: 0px 0px 7px yellow;
+            border: 1px solid yellow;
+        }
+
+        #eu{
+
+        }
+
+        .img_nos{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .img_nos img{
+            width: 200px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .imagem{
+            display: flex;
+            justify-content: center;
+            width: 300px;
+            margin-bottom: 40px;
+        }
+
+        .imagem img{
+            width: 100%;
+        }
+
+        #video{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background-color: #0cc0df;
+            border-radius: 15px;
+        }
+
+        #video iframe{
+            aspect-ratio: 16/9;
+            max-width: 100%;
+            width: 560px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo_nome">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+            <h2>SafeLife</h2>
+            </div>
+            <nav>
+                <a href="indexx.html">Home</a>
+                <li class="dropdown">
+                    <a href="#" id="conteudoLink" class="conteudo" >Conteúdo</a>
+                    <div class="caixa-dropdown">
+                        <a href="estati.html">Estatísticas</a>
+                        <a href="causas.html">Causas</a>
+                        <a href="conse.html" >Consequências</a>
+                        <a href="prevencao.html" >Prevenção</a>
+                        <a href="legislacao.html">Legislação</a>
+                        <a href="testemunhos.html" >Testemunhos</a>
+                    </div>
+                </li>
+                <a href="conclusão.html"   class="selected">Conclusão</a>
+                <a href="formulario.html">Contato</a>
+                <a href="bibliografia.html">Bibliografia</a>
+            </nav>
+        </header>
+        
+        <div class="content">
+                <div id="conc" class="slide-in-top">
+                    <h1 class="scale-in-hor-left ">Conclusão</h1>
+                    <p>Uma das principais formas de reduzir a violência no trânsito é através de campanhas educativas, tanto para motoristas quanto para pedestres. Campanhas de conscientização sobre os riscos de dirigir sob efeito de álcool, a importância do uso do cinto de segurança e o respeito aos limites de velocidade podem ter um impacto significativo na mudança de comportamento.</p>
+                    <p>Uma das principais formas de reduzir a violência no trânsito é através de campanhas educativas, tanto para motoristas quanto para pedestres. Campanhas de conscientização sobre os riscos de dirigir sob efeito de álcool, a importância do uso do cinto de segurança e o respeito aos limites de velocidade podem ter um impacto significativo na mudança de comportamento.</p>
+                    <div class="imagem"><img src="onibus (1).png" alt=""></div>
+                    <div id="video">
+                        <iframe src="https://www.youtube.com/embed/TJfSf5wYXQY?si=Rb7bPdb5GhVCIDeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p>fonte</p>
+
+                </div>
+                <div id="caixa_nos">
+                    <h2>Sobre nós</h2>
+                    <div class="nos">
+                        <div class="img_nos"><img src="bru.png" alt=""></div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus quisquam blanditiis veniam laborum maiores in obcaecati explicabo non facere ducimus dicta eveniet pariatur magni dignissimos aperiam fuga nulla, exercitationem quis.</p>
+                    </div>
+                    <div class="nos" id="eu">
+                        <div class="img_nos"><img src="WIN_20241021_17_17_53_Pro.jpg" alt=""></div>
+                        <p>Me chamo Camila e estudo na escola ETEC Albert Einsten. Neste projeto, eu e minha dupla criamos um site informativo sobre a violência do trânsito, com acompanhamento da professora Lucimara.</p>
+                    </div>
+                </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SafeLife</p>
+                <div class="redes">
+                    <i class="fa-brands fa-instagram redes_icons "></i>
+                    <i class="fa-brands fa-linkedin redes_icons"></i>
+                    <i class="fa-brands fa-youtube redes_icons"></i>
+                </div>
+            </div>
+            <p>Produzido por Camila</p>
+        </footer>
+    </div>
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a235ee22ad.js" crossorigin="anonymous"></script>
+    <title>Formulário</title>
+    <style>
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1{
+            text-transform: uppercase;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            border: 2px solid #e83e54;
+            box-shadow: 0px 0px 10px #e83e5590;
+            border-radius: 50px;
+            gap: 10px;
+            padding: 40px 60px;
+            flex-wrap: wrap;
+        }
+
+        label:first-child{
+            margin-top:0px
+        }
+
+        label, #mar{
+            margin-top: 20px;
+        }
+
+        input, textarea{
+            font-size: 15px;
+            font-family: 'Roboto','Arial', sans-serif;
+        }
+
+        input[type="text"],input[type="number"], input[type="email"] {
+            height: 40px;
+            border-radius: 25px;
+            padding: 0px 20px;   
+        }
+
+        input[type="text"],input[type="number"], input[type="email"], textarea, input[type="submit"]{
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+        textarea{
+            height: 100px;
+            border-radius: 25px;
+            padding: 20px 0px 0px 20px ;
+            resize: none; 
+
+        }
+
+        input[type="submit"]{
+            height: 40px;
+            border-radius: 25px;
+            background-color: #4ed8c4;
+            text-transform: uppercase;
+        }
+
+        .no{
+            margin-top: 0px;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: #4ed8c4;
+            box-shadow: 0 0 8px rgba(78, 216, 196, 0.5);
+        }
+
+        input[type="submit"] {
+            background-color: #4ed8c4;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0px 0px 10px #3cb8a381;
+            border-color: #5cf8e1;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3cb8a3;
+        }
+
+        input[type="radio"] {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border: 2px solid #4ed8c4;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        input[type="radio"]:checked::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: #4ed8c4;
+            border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+        }
+
+        #text{
+            max-width: 600px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo_nome">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+            <h2>SafeLife</h2>
+            </div>
+            <nav>
+                <a href="indexx.html">Home</a>
+                <li class="dropdown">
+                    <a href="#" id="conteudoLink" class="conteudo" >Conteúdo</a>
+                    <div class="caixa-dropdown">
+                        <a href="estati.html">Estatísticas</a>
+                        <a href="causas.html">Causas</a>
+                        <a href="conse.html" >Consequências</a>
+                        <a href="prevencao.html" >Prevenção</a>
+                        <a href="legislacao.html">Legislação</a>
+                        <a href="testemunhos.html" >Testemunhos</a>
+                    </div>
+                </li>
+                <a href="conclusão.html">Conclusão</a>
+                <a href="formulario.html"    class="selected">Contato</a>
+                <a href="bibliografia.html">Bibliografia</a>
+            </nav>
+        </header>
+        
+        <div class="content">
+            <div id="text" class="slide-in-top">
+                <h1>Conecte-se conosco</h1>
+                <p>
+                    Preencha o seguinte formulário para te enviarmos novidades em seu email e para sabermos qual a sua opinião sobre a violência no trânsito:
+                </p>
+            </div>
+            <form id="cadastroForm" method="post" action="pagina_posFormulario.html" class="slide-in-fwd-center" >
+                <label for="nome">Qual é o seu nome?</label>
+                <input type="text" id="nome" name="nome"required placeholder="Digite aqui"></input>
+
+                <label for="idade">Qual é a sua idade?</label>
+                <input type="number" id="idade" name="idade"required placeholder="Insira apenas números">
+
+                <span id="mar">Você já enfrentou algum tipo de acidente? </span>
+                <label for="sim" class="no"><input type="radio" id="sim" name="aci">Sim</input></label>
+
+                <label for="nao" class="no"><input type="radio" id="nao" name="aci">Não</input></label>
+
+                <label for="opiniao">Se sim, conte um pouco como foi e por que aconteceu? </label>
+                <textarea id="opiniao" name="opiniao" required placeholder="Digite aqui"></textarea>
+                
+                <label for="opiniao">O que você sugere para a diminuição de  acidentes no trânsico?</label>
+                <textarea id="opiniao" name="opiniao"required placeholder="Digite aqui"></textarea>
+                
+                <label for="email">E-mail para receber notificações de atualizações:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite aqui">
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SafeLife</p>
+                <div class="redes">
+                    <i class="fa-brands fa-instagram redes_icons "></i>
+                    <i class="fa-brands fa-linkedin redes_icons"></i>
+                    <i class="fa-brands fa-youtube redes_icons"></i>
+                </div>
+            </div>
+            <p>Produzido por Camila</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

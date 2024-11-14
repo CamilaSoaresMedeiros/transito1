@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a235ee22ad.js" crossorigin="anonymous"></script>
+    <title>Prevenção</title>
+    <style>
+
+        h2{
+            font-size: 22px;
+        }
+
+
+       .card-container {
+            perspective: 1000px;
+            width: 250px;
+            height: 300px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .card-container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Esconde o lado de trás quando rotacionado */
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            
+        }
+
+        .card-front {
+            background-color: #fcd568;
+        }
+
+        .card-back {
+            background-color: #0cc0df;
+            transform: rotateY(180deg); /* O lado de trás começa rotacionado */
+        }
+
+        .card-back img{
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo_nome">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+            <h2>SafeLife</h2>
+            </div>
+            <nav>
+                <a href="indexx.html">Home</a>
+                <li class="dropdown">
+                    <a href="#" id="conteudoLink" class="conteudo selected" >Conteúdo</a>
+                    <div class="caixa-dropdown">
+                        <a href="estati.html">Estatísticas</a>
+                        <a href="causas.html">Causas</a>
+                        <a href="conse.html" >Consequências</a>
+                        <a href="prevencao.html"  class="selected">Prevenção</a>
+                        <a href="legislacao.html">Legislação</a>
+                        <a href="testemunhos.html">Testemunhos</a>
+                    </div>
+                </li>
+                <a href="conclusão.html">Conclusão</a>
+                <a href="formulario.html">Contato</a>
+                <a href="bibliografia.html">Bibliografia</a>
+            </nav>
+        </header>
+
+
+        <div class="content">
+                <div class="text-section slide-in-left">
+                    <h1 class="scale-in-hor-left">Prevenção</h1>
+                    <p class="desc">Para reduzir a violência no trânsito, é necessário investir em educação no
+                    trânsito, fiscalizar, melhorias na infraestrutura e tecnologias de segurança.</p>
+                </div>
+                <div class="caixa-conse-container">
+                  <div class="caixa-conse tilt-in-bottom-2 ">
+                      <div class="circle">
+                        <img src="educacao.gif" alt="">
+                      </div>
+                      <div class="card-container">
+                          <div class="card">
+                              <div class="card-front">
+                                  <h2>Educação no trânsito: </h2>
+                                  <p>Campanhas educativas sobre a 
+                                    importância de respeitar as leis de trânsito e dirigir com responsabilidade.</p>
+                              </div>
+                              <div class="card-back">
+                                  <img src="ensinar.jpg" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="caixa-conse tilt-in-bottom-2">
+                      <div class="circle">
+                        <img src="camera.gif" alt="">
+                      </div>
+                      <div class="card-container">
+                          <div class="card">
+                              <div class="card-front">
+                                  <h2>Fiscalização:</h2>
+                                  <p>Aumentar a fiscalização com uso de radares, 
+                                    bafômetros e controle mais rigoroso nas estradas e vias urbanas.</p>
+                              </div>
+                              <div class="card-back">
+                                <img src="cctv-security-camera (1).jpg" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="caixa-conse tilt-in-bottom-2">
+                      <div class="circle">
+                        <img src="ponte.gif" alt="">
+                      </div>
+                      <div class="card-container">
+                          <div class="card">
+                              <div class="card-front">
+                                  <h2>Melhoria da infraestrutura: </h2>
+                                  <p>Investir em vias melhor 
+                                    sinalizadas, com iluminação adequada e separação clara entre faixas para 
+                                    carros, bicicletas e pedestres.</p>
+                              </div>
+                              <div class="card-back">
+                                  <img src="eng.jpg" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="caixa-conse tilt-in-bottom-2">
+                    <div class="circle">
+                        <img src="carro.gif" alt="">
+                    </div>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-front">
+                                <h2>Tecnologia: </h2>
+                                <p>Incentivar o uso de carros com sistemas de 
+                                    segurança avançados, como frenagem automática e controle de velocidade.</p>
+                            </div>
+                            <div class="card-back">
+                                <img src="tec.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="caixa-conse tilt-in-bottom-2" >
+                    <div class="circle">
+                        <img src="lei.gif" alt="">
+                    </div>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-front">
+                                <h2>Legislação mais rígida: </h2>
+                                <p>Multas mais severas para infratores 
+                                    reincidentes, além de penas maiores para crimes graves no trânsito. </p>
+                            </div>
+                            <div class="card-back">
+                                <img src="lei.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+              </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer_info">
+                <p>SafeLife</p>
+                <div class="redes">
+                    <i class="fa-brands fa-instagram redes_icons "></i>
+                    <i class="fa-brands fa-linkedin redes_icons"></i>
+                    <i class="fa-brands fa-youtube redes_icons"></i>
+                </div>
+            </div>
+            <p>Produzido por Camila</p>
+        </footer>
+    </div>
+</body>
+</html>
