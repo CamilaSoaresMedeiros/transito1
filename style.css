@@ -197,7 +197,10 @@
   }
 }
 
-
+*::selection{
+  background-color: #e4c54e;
+  color: #4d4d4d;
+}
 
 .borda{
     border: 1px solid red;
