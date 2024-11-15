@@ -295,10 +295,6 @@ nav a:hover, .dropdown:hover .conteudo {
 
 .footer{
     grid-area: "c";
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
 }
 
 .footer p:last-child{
