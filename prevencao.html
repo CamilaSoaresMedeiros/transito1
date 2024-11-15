@@ -37,13 +37,12 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            backface-visibility: hidden; /* Esconde o lado de trás quando rotacionado */
+            backface-visibility: hidden; 
             display: flex;
             flex-direction: column;
             padding: 10px;
             box-sizing: border-box;
             border-radius: 8px;
-            
         }
 
         .card-front {
@@ -52,13 +51,13 @@
 
         .card-back {
             background-color: #0cc0df;
-            transform: rotateY(180deg); /* O lado de trás começa rotacionado */
+            transform: rotateY(180deg);
         }
 
         .card-back img{
             aspect-ratio: 3/4;
             object-fit: cover;
-            padding: 10px;
+            margin: 10px;
             border-radius: 8px;
         }
 

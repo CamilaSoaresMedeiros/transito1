@@ -72,8 +72,6 @@
         );
         display: flex;
         align-items: center;
-        font-size: 18px;
-        color: white;
         }
 
         .legend {
@@ -91,11 +89,11 @@
             margin-right: 10px;
         }
 
-        .legend .green { background-color: #fcd568; }
-        .legend .orange { background-color: #0cc0df; }
-        .legend .red { background-color: #4ed8c4; }
-        .legend .blue { background-color: #3e566a }
-        .legend .purple { background-color: #fc7d6e; }
+        .legend .ama { background-color: #fcd568; }
+        .legend .blue { background-color: #0cc0df; }
+        .legend .green { background-color: #4ed8c4; }
+        .legend .dark { background-color: #3e566a }
+        .legend .red { background-color: #fc7d6e; }
 
         .line-chart {
             position: relative;
@@ -103,7 +101,6 @@
             height: 200px;
             border-left: 2px solid #000;
             border-bottom: 2px solid #000;
-            margin: 20px 0 0 0; /* Aproxima o gráfico dos eixos */
         }
 
         .line {
@@ -161,29 +158,28 @@
 
         .labels div {
             text-align: center;
-
         }
 
 
-            .bar::after {
-            content: attr(informaçao); /* Exibe o texto do atributo data-info */
-            position: absolute;
-            bottom: 50%; /* Coloca o texto acima da barra */
-            left: 0%;
-            transform: translateX(-50%);
-            background-color:  #fcd568;
-            color: #333;
-            padding: 5px;
-            border-radius: 5px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            white-space: nowrap;
-            }
+        .bar::after {
+        content: attr(informaçao);
+        position: absolute;
+        bottom: 50%; /* Coloca o texto acima da barra */
+        left: 0%;
+        transform: translateX(-50%);
+        background-color:  #fcd568;
+        color: #333;
+        padding: 5px;
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: wrap;
+        }
 
-            .bar:hover::after {
-            opacity: 1; /* Exibe o texto ao passar o mouse */
-            z-index: 2;
-            }
+        .bar:hover::after {
+        opacity: 1;
+        z-index: 2;
+        }
 
 
 
@@ -193,7 +189,6 @@
             position: relative;
             height: 200px;
             width: 50px;
-            margin-top: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -286,11 +281,11 @@
                 <div class="pie-chart ">
                 </div>
                 <div class="legend">
-                    <div><span class="green"></span> 30% - Colisões Frontais</div>
-                    <div><span class="orange"></span> 25% - Batidas Traseiras</div>
-                    <div><span class="red"></span> 20% - Batidas Laterais</div>
-                    <div><span class="blue"></span> 10% - Capotamentos</div>
-                    <div><span class="purple"></span> 15% - Atropelamentos</div>
+                    <div><span class="ama"></span> 30% - Colisões Frontais</div>
+                    <div><span class="blue"></span> 25% - Batidas Traseiras</div>
+                    <div><span class="green"></span> 20% - Batidas Laterais</div>
+                    <div><span class="dark"></span> 10% - Capotamentos</div>
+                    <div><span class="red"></span> 15% - Atropelamentos</div>
                 </div>
             </div>
 
