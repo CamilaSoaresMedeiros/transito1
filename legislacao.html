@@ -42,7 +42,7 @@
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
+            transition: max-height 0.2s ease-in-out;
             padding: 0 20px;
             background-color: #edeced;
             text-align: justify;
@@ -53,24 +53,16 @@
             padding: 10px 0;
         }
 
-        /* Usando o :checked para controlar a expansão */
         input[type="checkbox"] {
             display: none;
         }
 
         input[type="checkbox"]:checked + label + .accordion-content {
-            max-height: 500px; /* Altura suficiente para o conteúdo expandir */
-        }
-
-        /* Remover margem quando a lista não está expandida */
-        input[type="checkbox"] + label + .accordion-content {
-            display: none;
-        }
-
-        input[type="checkbox"]:checked + label + .accordion-content {
+            max-height: 500px;
             display: block;
         }
-        
+
+
 
         h3{
             font-size: 18px;
